@@ -104,6 +104,7 @@ html{
     top:22;
     right:40;
     cursor: pointer;
+    display:none;
 
 }
 .cls-btn{
