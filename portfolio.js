@@ -62,5 +62,24 @@ function showSideBar(){
     sidebar.style.display = "flex"
     console.log('ggg')
 }
-       
+
+window.addEventListener('scroll', function() {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.navFix a');
+
+    sections.forEach((section) => {
+        let top = window.scrollY;
+        let offset = section.offsetTop;
+        let height = section.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === section.id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
    
