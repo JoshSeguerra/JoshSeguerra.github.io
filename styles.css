@@ -73,7 +73,13 @@ html{
 .navOnMobile:hover{
     background-color: rgb(83, 78, 78);
 }
+.navFix a{
+    transition: 0.5s;
+}
 
+.navFix a.active{
+    color:   #e66e49;
+}   
 .btn-on-mobile{
     display: flex;
     margin-left: 20px;
