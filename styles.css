@@ -80,6 +80,7 @@ html{
 .navFix a.active{
     color:   #e66e49;
 }   
+
 .btn-on-mobile{
     display: flex;
     margin-left: 20px;
@@ -103,7 +104,6 @@ html{
     top:22;
     right:40;
     cursor: pointer;
-    display:none;
 
 }
 .cls-btn{
@@ -185,9 +185,7 @@ html{
     transform: scale(1.2)
 
 }
-.welcome-caption{
- 
-}
+
 .welcome-image-container{
     position: relative;
     z-index: 1;
@@ -473,9 +471,7 @@ color:rgb(207, 196, 196);
 }
 
 /*--skills--*/
-.active{
-    display: none;
-}
+
 
 .list-hover-container  .list-link > h4{
    font-size: 1.2rem;

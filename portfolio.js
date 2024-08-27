@@ -62,6 +62,7 @@ function showSideBar(){
     sidebar.style.display = "flex"
     console.log('ggg')
 }
+       
 
 window.addEventListener('scroll', function() {
     let sections = document.querySelectorAll('section');
@@ -82,4 +83,35 @@ window.addEventListener('scroll', function() {
         }
     });
 });
-   
+console.log(section)
+// window.addEventListener('scroll', function() {
+//     const navLinks = document.querySelectorAll('.navFix a');
+//     const offset = 50; // Adjust this offset value to determine when the color should change
+    
+//     if (window.scrollY > offset) {
+//         navLinks.forEach(link => link.classList.add('scrolled'));
+//     } else {
+//         navLinks.forEach(link => link.classList.remove('scrolled'));
+//     }
+// });
+// let sections = document.querySelectorAll('section');
+// let navLinks = document.querySelectorAll('.navFix a');
+
+// window.onscroll = () => {
+//     sections.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
+
+//         if (top >= offset && top < offser + height) {
+//             navLinks.forEach(links => {
+               
+//                 links.classList.remove('active');
+//                 document.querySelector('navFix a [href*=' + id + ']').classList.add('active');
+//             });
+
+//         };
+//     });
+// };
+
