@@ -38,12 +38,75 @@ html{
     position: fixed;
     
 }
-.nav{
+.navHider{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+.sidebar{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100svh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding-top: 10px;
+    backdrop-filter: blur(10px);
+}
+.sidebar i{
+    font-size: 2rem;
+}
+.logoOnMobile{
+    width: 100px;
+    height: 100px;
+    
+
+}
+.navOnMobile{
+    height: 4rem;
+    align-content: center;
+    padding-left: 20px;
+}
+.navOnMobile:hover{
+    background-color: rgb(83, 78, 78);
+}
+
+.btn-on-mobile{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    gap:6px;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    height: 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: linear-gradient(to right top, #e9ff00, #ffb11d, #e66e49, #a64558, #572e49, #4b364b, #423c47, #3f3f3f, #6a6a6a, #999999, #cbcbcb, #ffffff);
+    cursor: pointer;
+    margin-top: 20px;
+}
+.navFix .bgr-btn{
+    font-size: 2rem;
+    position: absolute;
+    top:22;
+    right:40;
+    cursor: pointer;
+
+}
+.cls-btn{
+    position: absolute;
+    top: 10;
+    right: 20;
+    cursor: pointer;
+}
+
+
 
 .header a{
     text-decoration:none;
@@ -66,6 +129,7 @@ html{
     color: rgb(255, 255, 255);
     position: absolute;
     right:200px;
+    top:20;
     width: 120px;
     height: 40px;
     width: 150px;
@@ -114,10 +178,13 @@ html{
     transform: scale(1.2)
 
 }
-
+.welcome-caption{
+ 
+}
 .welcome-image-container{
     position: relative;
     z-index: 1;
+    
 }
 
 .welcome-image-container:after{
@@ -138,12 +205,15 @@ html{
     border-radius: 50%;
     animation: updown 2s alternate-reverse infinite;
     padding-left: 50px;
+  
+    width:90%;
    
 }
 .wrapper{
     position: relative;
     z-index: 1;
     height: 100svh;
+    margin: 0 auto;
 }
 .image-fly{
     transition: 0.7s;
@@ -157,19 +227,19 @@ html{
 }
 .rocket{
     z-index: -5;
-    top: 100;
+    bottom: 100;
     left:0;
     position: absolute;
     width:250px;
     opacity: 0.5;
-    animation: moving 20s alternate-reverse infinite;
+    animation: moving 10s alternate-reverse infinite;
 }
 .image-slide{
     z-index: -2;
     position: absolute;
     width: 250px;
     left: 20;
-    top: 750;
+    top: 550;
     animation: rotate 5s alternate-reverse infinite;
     opacity: 0.5;
 }
@@ -177,12 +247,9 @@ html{
 
 @keyframes moving {
     0%{
-        transform: translateX(1400px) rotate(300deg) 
+        transform: translateX(800px)  translateY(-500px) rotate(300deg) 
     }
-    100%
-    {
-        transform: translateY(800px);
-    }
+  
     
     
 }
@@ -279,7 +346,13 @@ html{
 
     text-align: start;
     width: 50%;
-}.tech-details h2{
+}
+.tech-details h1{
+    font-size: 3rem;
+    text-align: start;
+   
+}
+.tech-details h2{
     font-size: 1.5rem;
     font-weight: 300;
     color: rgb(236, 125, 125);
@@ -298,11 +371,13 @@ html{
 /*--------------About me-------------------*/
 
 .aboutme-section{
+    margin:0 auto;
+    width:100%;
     padding-top: 100px;
     height:100svh;
     display: flex;
-    justify-content: center;
-    gap:200px;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     color:rgb(207, 196, 196);
     position: relative;
@@ -311,7 +386,7 @@ html{
 
 
 .aboutme-img{
-    width: 500px;
+    max-width: 100%;
     padding-bottom: 200px;
     animation: updown 3s alternate-reverse infinite;
 }
@@ -395,8 +470,8 @@ color:rgb(207, 196, 196);
     display: none;
 }
 
-.list-hover-container  .about-me-list-skills > h4{
-   font-size: 1.3rem;
+.list-hover-container  .list-link > h4{
+   font-size: 1.2rem;
    color: #ee435d;
 }
 .list-hover-container  .about-me-list-skills > p{
@@ -405,10 +480,6 @@ color:rgb(207, 196, 196);
 }
 /*--Experience--*/
 
-.list-hover-container  .about-me-list-experience > h4{
-    font-size: 1.3rem;
-    color: #ee435d;
-}
 .list-hover-container  .about-me-list-experience > p{
     font-size: 1rem;
     
@@ -422,7 +493,7 @@ color:rgb(207, 196, 196);
 @keyframes ufo {
     0%
     {
-        transform: translateX(1400px) rotate(-90deg)
+        transform: translateX(1000px) rotate(-90deg)
         
     }
     
@@ -434,9 +505,9 @@ color:rgb(207, 196, 196);
     position: absolute;
     z-index: -1;
     opacity: 0.5;
-    left: 250;
-    bottom:20;
-    animation: ufo 15s alternate-reverse infinite;
+    left: 300;
+    bottom:-50;
+    animation: ufo 10s alternate-reverse infinite;
     animation-play-state: running;
     cursor: pointer;
 }
@@ -644,3 +715,204 @@ footer{
     justify-content: center;
     align-items: center;
 }
+@media (max-width:390px){
+    
+
+}
+
+
+@media (max-width:1600px) {
+
+    .header{
+        height: 3.4rem;
+       
+    }
+    .navHider .logo{
+        height: 100px;
+    }
+    
+    .navFix a{
+        font-size: 1rem;
+    }
+    .btn{
+        top: 7px;
+        width: 120px;
+        font-size: 0.5rem;
+    }
+   
+    .navFix .bgr-btn{
+        top:14;
+        font-size: 1.6rem;
+    }
+    .welcome-caption h2, h3{
+        font-size: 2rem;
+    }
+    .welcome-caption h1{
+        font-size: 3rem;
+    }
+    .links i{
+        font-size: 2.5rem;
+    }
+    .welcome-image{
+        height: 400px;
+    }
+    .image-slide{
+        height: 200px;
+        width: 200px;
+    }
+    .rocket{
+        height:120px;
+        width: 170px;
+    }
+    .techstack-logo{
+        height: 150px;
+        width: 100px;
+        
+    }
+    .techstack-logo img{
+        height: 60px;
+    }
+    .tech-details{
+        display: flex;
+        flex-direction: column;
+        gap:15px
+    }
+    .tech-details h1{
+        font-size: 3rem;
+    }
+    .tech-details h2{
+        font-size: 1.3rem;
+    }
+    .tech-details h3{
+        font-size: 1.2rem;
+    }
+    
+    .image-fly{
+        height: 200px;
+        z-index: -22;
+    }
+
+    .about-me-list li{
+        font-size: 1.2rem;
+    }
+    .list-hover-container  .list-link > h4{
+        font-size: 0.9rem;
+      
+    }
+     .aboutme-img{
+        width:80%;
+        padding-top: 100px;
+      
+    }
+    .list-hover-container  .list-link > p{
+        font-size: 0.9rem;
+        
+     }
+     .aboutme-details{
+        margin-bottom: 100px;
+        width: 50%;
+     }
+    .aboutme-details h1{
+        font-size: 4rem;
+    }
+    .aboutme-details p{
+        font-size: 1rem;
+    }
+    
+    .my-porjects-title h1{
+        font-size: 3.5rem;
+    }
+    .card-container video{
+        height: 300px;
+        width:400px;
+        border-radius:30px;
+        
+    }
+    .card-details h3{
+        font-size: 1.6rem;
+    }
+    .card-details p{
+        font-size: 1rem;
+    }
+    .prog-lang-logo{
+        width: 100px;
+        height: 30px;
+    }
+    .source a{
+        font-size: 1.3rem;
+    }
+    
+    .ufo{
+        height: 100px;
+        width: 100px;
+        top:120;
+    }
+    .contact-details h1{
+        font-size: 3rem;
+    }
+    .contact-details .contact-info h4{
+        font-size: 1.5rem;
+    }
+    .contact-details .contact-info i{
+        font-size: 1.5rem;
+    }
+    .contact-links i{
+        font-size: 2.4rem;
+    }
+    .input-container #name, #email{
+        height: 1.5rem;
+        width:450;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    .input-container #message{
+        height: 14rem;
+        width:100%;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    .contact-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.3rem;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width:800px) {
+    .hide{
+        display: none
+    }
+    
+   
+}
+
+@media (max-width:800px) {
+    .bgr-btn{
+        display: none;
+    }
+    .image-slide{
+        display:none;
+    }
+    .hero{
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome-image{
+        height: 300px;
+    }
+    .welcome-caption{
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+

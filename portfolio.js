@@ -51,6 +51,16 @@ form.addEventListener("submit", (e) =>{
     sendEmail();
 })
 
-        
+function closed(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = "none"
+    console.log('asd');
+
+}
+function showSideBar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = "flex"
+    console.log('ggg')
+}
        
    

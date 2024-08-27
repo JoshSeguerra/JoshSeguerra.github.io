@@ -12,16 +12,30 @@
 <body>
     <section class="wrapper" id="hero">
         <header class="header"> 
-            <div class="nav">
+            <div class="navHider">
             <a href="#hero"><img src="./images/logo.png" alt="" class="logo"></a>
-            <nav>
-                <a href="#knowledge" >Knowledge</a>
-                <a href="#aboutme" >About</a>
-                <a href="#projects">Project</a>
-                <a href="#contact" >Contact</a>
+            <nav class="navFix">
+                <a href="#knowledge" class="hide" >Knowledge</a>
+                <a href="#aboutme" class="hide" >About</a>
+                <a href="#projects" class="hide">Project</a>
+                <a href="#contact"  class="hide">Contact</a>
+                <a href="JSresume.pdf"  download class="btn hide">Resume <i class="fa-regular fa-circle-down"></i></a>
+                <div class="bgr-btn" ><i onclick="showSideBar()" class="fa-solid fa-bars"></i></div>
             </nav>
+            <div>
+                <nav class="sidebar">
+                    <a href="#wrapper"><img src="images/logo.png" alt="" class="logoOnMobile"></a>
+                    <a href="#knowledge" class="navOnMobile">Knowledge</a>
+                    <a href="#aboutme" class="navOnMobile">About</a>
+                    <a href="#projects"class="navOnMobile">Project</a>
+                    <a href="#contact" class="navOnMobile">Contact</a>
+                    <a href="JSresume.pdf"  download class="btn-on-mobile">Resume <i class="fa-regular fa-circle-down"></i></a>
+                    <div class="cls-btn"><i onclick="closed()" class="fa-solid fa-xmark"></i></div>
+                   
+                </nav>
+              
             </div>
-            <a href="JSresume.pdf" download class="btn">Resume <i class="fa-regular fa-circle-down"></i></a>
+            
         
         </header>
         <div class="hero" >
@@ -31,8 +45,8 @@
                 <h3>From Philippines</h3>
                 <div class="links">
                     <a href="https://www.facebook.com/fb.jseguerra/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JoshSeguerra" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="https://www.linkedin.com/in/joshua-seguerra-522a16220/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 
                 </div>
             </div>
@@ -42,8 +56,8 @@
         </div>
         <div class="parallax">
             <img src="/images/image-slide.png" alt="" class="image-slide">
-            <img src="/images/hireme-avatar.png" alt="" class="image-fly">
-           
+            <a href="#name"><img src="/images/hireme-avatar.png" alt="" class="image-fly">
+            </a>
         </div>
     </section>
     <section class="tech-stacks" id="knowledge">
@@ -74,9 +88,9 @@
                     </ul>
                     <div class="list-hover-container">
                         <div class="about-me-list-skills active list-link ">
-                        <h4>Web Development</h4>
+                        <h4 >Web Development</h4>
                         <p>Knowledgeable in building website using HTML, CSS and JavaScript without frameworks, focusing on core concepts.</p>
-                    <h4>Leadership and Communication</h4>
+                    <h4 >Leadership and Communication</h4>
                         <p>Demonstrated leadership and communication skills as an Station Agent in my role at Airspeed International(FedEx).</p>
                         <h4>Data Management and Reporting</h4>
                         <p>Skilled in data encoding, finalizing reports, and ensuring accurate system monitoring.</p>
@@ -143,15 +157,18 @@
                     <h4> <i class="fa-solid fa-mobile-screen"> </i> &#160 +639936623241</h4>
                 </div>
                 <div class="contact-links">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a href="https://www.facebook.com/fb.jseguerra/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://github.com/JoshSeguerra" target="_blank"><i  class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/joshua-seguerra-522a16220/" target="_blank"><i  class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i href="#" class="fa-brands fa-twitter"></i></a>
+                    
+                    
+                    
                 </div>
                 
             </div>
             <form class="input-container" onsubmit="sendEmail(); reset(); return false">
-                <input type="text" id="name" name="name" placeholder="Your Name" >
+                <input type="text" id="name" name="name" placeholder="Your Name / Company Name" >
                 <input type="email" name="email" id="email" placeholder="Email Address">
                 <textarea name="Message" id="message" placeholder="Write Your Message"></textarea  >
                 <button type="submit" class="contact-btn">Submit</button>
@@ -161,7 +178,7 @@
         <footer>
             <p>&copy; 2024 Joshua Seguerra. All Rights Reserved.</p>
             <p>Created with passion using HTML, CSS, and JavaScript</p>
-            <p>Connect with me: <a href="https://www.linkedin.com/in/joshua-seguerra">LinkedIn</a> | <a href="mailto:your.email@example.com">Email</a></p>
+            <p>Connect with me: <a href="https://www.linkedin.com/in/joshua-seguerra-522a16220/">LinkedIn</a> | <a href="mailto:your.jsh.seguerra@gmail.com">Email</a></p>
         </footer>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         
