@@ -1055,3 +1055,10 @@ footer {
   bottom: 12;
   font-size: 2rem, T;
 }
+
+.motivara {
+  color: rgb(202, 8, 8);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
